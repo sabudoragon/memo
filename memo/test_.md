@@ -69,3 +69,41 @@ buildメソッド→をジェットを生成するときに呼び出されるメ
 onpress→押されたときに呼ばれるメソッドを書く
 
 setState→ステートの更新があったことを知らせて画面を更新する
+文字サイズ
+フォント
+文字の太さ
+
+色指定
+```
+Color(0x00000000)
+```
+ARGB2桁ずつ使う  
+Color.fromARGBを使うことで10進数で書ける
+```
+Color.fromARGB(255, 255, 3, 4)
+```
+
+Center  
+child指定したWidgetを上下中央揃えで表示する
+
+Container  
+Centerよりも、より細かく一の寮生をする場合に使用する  
+Edelnsets:周囲の余白幅を設定するためのクラス  
+Alignment:配置場所を設定するためのクラス
+
+Column:複数のウィジェットを縦に並べて表示する
+```
+Column(
+    mainAxisAlignment: MainAlignment.start,
+    mainAxisSize: MainAxisSize.max,
+    crossAxisAlignment: CrossAxisAlignment.center,
+    children: <Widget>[
+        Text(略),
+        Text(略),
+        Text(略)
+    ]
+),
+```
+上下の位置：mainAxixAlignment: MainAxisAlignment.start,  
+左右の位置：corssAxixAlignment: CrossAxixAlignment.center,  
+Rowでは左右の位置になることに注意しましょう
