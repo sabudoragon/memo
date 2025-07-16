@@ -106,4 +106,50 @@ Column(
 ```
 上下の位置：mainAxixAlignment: MainAxisAlignment.start,  
 左右の位置：corssAxixAlignment: CrossAxixAlignment.center,  
-Rowでは左右の位置になることに注意しましょう
+Rowでは左右の位置になることに注意しましょう  
+```
+TextButton(
+    onPressed: buttonPressed,
+    child: Padding(
+        padding: EdgeInsets.all(10.0),
+        child: Text(
+            "Puch me!",
+            sytle: TextStyle(略)
+        )
+    )
+)
+```
+onPressed ボタンが押されたときに実行されるメソッド  
+child ボタン内に表示するウィジェット  
+カスケード記法　式の値をもとにオブジェクトにしたまま操作を行う記法  
+               同一のオブジェクトに対して複数の操作を行うことができる
+```
+janken..shuffle()
+```
+
+TextField  
+自由に文字を入力させたいとき  
+
+ChecBox Switch   
+要素に該当するかどうかチェックさせたいとき
+
+Radio DropdpwnButton PopupMenuButton  
+複数の要素から一つだけ選ばせたいとき
+
+Slider  
+特定の値の範囲で数値を入力させたいとき
+
+# TextField
+文字を入力できるだけ  
+入力された値を保持しているわけではない  
+値の操作にはControllerが必要 _controller  
+値が変更されるたびに呼ばれる**onChange**というイベントもある
+
+3項演算子
+```
+void main() {
+    int a = 10;
+
+    print(a < 10 ? "ok" : "ng");
+}
+```
