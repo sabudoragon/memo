@@ -153,3 +153,20 @@ void main() {
     print(a < 10 ? "ok" : "ng");
 }
 ```
+
+```
+showDialog(
+    context: context,
+    builder: (BuildContext context) => Alertdialog(
+        title: Text("Hello!"),
+        content: Text("This is sample.")
+    )
+)
+```
+AliertDialog:アラートを表示することのできるdialog
+```
+AlertDialog(
+    title: ウィジェット,
+    content: ウィジェット,
+)
+```
