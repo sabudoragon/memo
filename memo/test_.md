@@ -178,3 +178,65 @@ TabBar(
     tabs: [Tabのリスト],
 ),
 ```
+
+## Sliderの基本形
+```
+slider(
+    onChanged: 関数,
+    min:<<double>>,
+    max:<<double>>,
+    divisions:<<int>>,
+    value:<<double>>,
+),
+```
+onChange:変更時のイベント処理。ドラッグ中、値が変わるたびに呼び出される。  
+min:最小値  
+max:最大値  
+divisions:分割数。例えばmin:0,max:10でdivisions:10ならば、1ずつ値が選択される。  
+　　　　　　省略すると実数のまま滑らかに値が変化していく。  
+value:現在選択されている値  
+
+SimpleDialogについて
+
+```
+SinpleDialog(
+    title: ウィジェット,
+    childern: [ウィジェットのリスト],
+)
+```
+titleには、タイトルのテキストなどを設定。通常はtextを指定する。childrenには選択肢として表示する項目のリストを用意。  
+
+SimpleDialogOptionについて  
+```
+SinoleDialogOption(
+    child:ウィジェット,
+    onPressed:処理,
+)
+```
+childには、項目内に表示するウィジェットを指定。テキストを表示するだけならtextのみ。  
+
+ElevatedButtonについて  
+TextButtonと同じような働きをする。これはbuttonが少し立体的に表示される。  
+
+IconButtonについて
+```
+IconButton(
+    icon: const Icont(Icons.insert_emoticon),
+    iconSize: 100.0,
+    color: Colors.red,
+    onPressed:buttonPressed,
+)
+```
+icon:表示するアイコン。iconインスタンスとして用意する  
+iconSize:アイコンサイズ。double値で指定  
+color:アイコンの色  
+onPressed:クリックしたときに実行するメソッド
+
+FloatingActionButtonについて
+```
+FloatingActionButton(
+    child: Icon(Icons.android),
+    onPressed: buttonPressed
+),
+```
+Scaffoldにこれを設定することで、画面右下に自動的にボタンが追加表示されるようになる。
