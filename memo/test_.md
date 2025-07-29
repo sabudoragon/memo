@@ -170,3 +170,11 @@ AlertDialog(
     content: ウィジェット,
 )
 ```
+
+## TabBarの基本形
+```
+TabBar(
+    controller:<<TabController>>,
+    tabs: [Tabのリスト],
+),
+```
